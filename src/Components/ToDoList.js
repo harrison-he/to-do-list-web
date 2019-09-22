@@ -5,7 +5,7 @@ class ToDoList extends Component {
     render() {
         return (
             <ul>
-                <li>Exmaple To Do List Item</li>
+                <li>Example To Do List Item</li>
             </ul>
         )
     }
