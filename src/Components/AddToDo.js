@@ -1,11 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
+const styles = {
+    form: {
+        display: "flex", 
+        flexDirection: "column",
+        marginBottom: "10px"
+    },
+    inputBar: {
+        marginBottom: "2px"
+    }
+}
+
 class AddToDo extends Component {
     render() {
         return (
-            <form style={{ display: "flex", flexDirection: "column", marginBottom: "10px"}}>
-                <input placeholder="Enter To Do Item..." />
+            <form style={styles.form}>
+                <input style={styles.inputBar} placeholder="Enter To Do Item..." />
                 <input type="submit" ></input>
             </form>
         )
