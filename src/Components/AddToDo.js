@@ -5,16 +5,18 @@ const styles = {
     form: {
         display: "flex", 
         flexDirection: "column",
-        marginBottom: "10px",
+        marginBottom: "15px",
         width: "100%"
     },
     inputBar: {
         marginBottom: "10px",
-        borderRadius: "5px",
-        padding: "5px 10px"
+        borderRadius: "10px",
+        padding: "5px 10px",
+        height: "35px",
+        border: "1px solid #ccc"
     },
     submit: {
-        borderRadius: "5px",
+        borderRadius: "10px",
         padding: "10px",
     }
 }
@@ -24,7 +26,7 @@ class AddToDo extends Component {
         return (
             <form style={styles.form}>
                 <input style={styles.inputBar} placeholder="Enter To Do Item..." />
-                <input style={styles.submit} type="submit" ></input>
+                <button style={styles.submit} type="submit" >Add To Do Item</button>
             </form>
         )
     }

@@ -10,20 +10,17 @@ const styles = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        marginTop: "20px",
-        marginBottom: "5px",
         marginLeft: "auto",
         marginRight: "auto",
-        width: window.innerWidth > 700 ? "60%" : "95%",
+        width: window.innerWidth > 700 ? "34%" : "95%",
     },
     heading: {
+        marginTop: "40px",
         textAlign: "center",
         marginBottom: "10px",
         width: "100%"
     }
 }
-
-console.log("Width: ",styles.container.width)
 
 class App extends Component {
     render() {
