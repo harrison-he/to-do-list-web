@@ -6,18 +6,21 @@ const styles = {
         display: "flex", 
         flexDirection: "column",
         marginBottom: "15px",
-        width: "100%"
+        width: "100%",
+        backgroundColor: "#fff",
+        padding: "15px",
+        border: "1px #ccc solid",
     },
     inputBar: {
         marginBottom: "10px",
-        borderRadius: "10px",
-        padding: "5px 10px",
+       
+        border: "none",
+        padding: "5px 0",
         height: "35px",
-        border: "1px solid #ccc"
+        borderBottom: "1px solid #ccc"
     },
     submit: {
-        borderRadius: "10px",
-        padding: "10px",
+        padding: "10px 0"
     }
 }
 

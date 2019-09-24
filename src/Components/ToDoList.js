@@ -10,16 +10,16 @@ const styles = {
         display: "flex",
         justifyContent: "space-between",
         border: "1px #ccc solid",
-        padding: "10px",
+        padding: "15px",
         marginBottom: "10px",
-        borderRadius: "10px",
+        // borderRadius: "10px",
         backgroundColor: "#fff",
         alignItems: "center",
         color: "#111"
     },
     delete: {
         padding: "5px",
-        borderRadius: "10px",
+        // borderRadius: "10px",
        
     }
 }
