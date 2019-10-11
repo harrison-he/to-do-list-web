@@ -13,6 +13,7 @@ import {
 } from './../Constants/ToDoListConstants'
 
 export function getToDoItems() {
+    console.log(`${process.env.API_URL}/api/toDoList`)
     return dispatch => {
         dispatch(getToDoItemsStart())
         axios.get(`${process.env.API_URL}/api/toDoList`)
