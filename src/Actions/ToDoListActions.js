@@ -13,10 +13,9 @@ import {
 } from './../Constants/ToDoListConstants'
 
 export function getToDoItems() {
-    console.log(`${process.env.API_URL}/api/toDoList`)
     return dispatch => {
         dispatch(getToDoItemsStart())
-        axios.get(`${process.env.API_URL}/api/toDoList`)
+        axios.get(`${window.location.origin}/api/toDoList`)
             .then(res => dispatch(getToDoItemsSuccess(res.data)))
             .catch(error => dispatch(getToDoItemsError(error)))
     }
@@ -45,7 +44,7 @@ function getToDoItemsError(error) {
 export function postToDoItem(toDoItem) {
     return dispatch => {
         dispatch(postToDoItemStart())
-        axios.post(`${process.env.API_URL}/api/toDoList`, { toDoItem })
+        axios.post(`${window.location.origin}/api/toDoList`, { toDoItem })
             .then(res => dispatch(postToDoItemSuccess(res.data)))
             .catch(error => dispatch(postToDoItemError(error)))
     }
@@ -74,7 +73,7 @@ function postToDoItemError(error) {
 export function deleteToDoItem(toDoItemID) {
     return dispatch => {
         dispatch(deleteToDoItemStart())
-        axios.delete(`${process.env.API_URL}/api/toDoList/${toDoItemID}`)
+        axios.delete(`${window.location.origin}/api/toDoList/${toDoItemID}`)
             .then(res => dispatch(deleteToDoItemSuccess(res.data)))
             .catch(error => dispatch(deleteToDoItemError(error)))
     }

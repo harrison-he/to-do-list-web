@@ -7,7 +7,7 @@ const mongoose = require('mongoose')
 const app = express()
 
 app.use(express.json({ extended: false }))
-app.use(cors())
+// app.use(cors())
 
 mongoose.connect(process.env.MONGO_DB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB Connected'))
