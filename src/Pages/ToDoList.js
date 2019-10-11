@@ -45,7 +45,6 @@ class ToDoList extends Component {
     }
 
     render() {
-        console.log("Items: ",this.props.toDoItems)
         return (
             <List style={{ paddingTop: "60px" }}>
                 {this.props.toDoItems.map(toDoItem => (
