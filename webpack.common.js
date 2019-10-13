@@ -33,6 +33,7 @@ module.exports = {
                     chunks: 'all',
                 },
             },
+            chunks: 'all'
         }
     }
 }
