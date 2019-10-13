@@ -16,7 +16,7 @@ const initialState = {
     error: null
 }
 
-const ToDoListReducer = (state = initialState, action) => {
+function ToDoListReducer(state = initialState, action) {
     switch (action.type) {
         case DELETE_TO_DO_ITEM_START:
             return {
