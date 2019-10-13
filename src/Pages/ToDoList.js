@@ -13,7 +13,7 @@ import List from '@material-ui/core/List'
 import ListSubheader from '@material-ui/core/ListSubheader'
 import Input from '@material-ui/core/Input'
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline'
-import CircularProgress from '@material-ui/core/CircularProgress'
+// import CircularProgress from '@material-ui/core/CircularProgress'
 
 class ToDoList extends Component {
     constructor(props) {
@@ -47,20 +47,20 @@ class ToDoList extends Component {
 
     render() {
         let body
-        if (this.props.loading) {
-            body = <ListItem style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" }}><CircularProgress /></ListItem>
-        } else {
-            body = this.props.toDoItems.map(toDoItem => (
-                <ListItem key={toDoItem._id}>
-                    <ListItemText primary={toDoItem.value} />
-                    <ListItemSecondaryAction>
-                        <IconButton onClick={() => this.handleDelete(toDoItem._id)} edge="end">
-                            <DeleteIcon />
-                        </IconButton>
-                    </ListItemSecondaryAction>
-                </ListItem>
-            ))
-        }
+        // if (this.props.loading) {
+        //     body = <ListItem style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "80vh" }}><CircularProgress /></ListItem>
+        // } else {
+        body = this.props.toDoItems.map(toDoItem => (
+            <ListItem key={toDoItem._id}>
+                <ListItemText primary={toDoItem.value} />
+                <ListItemSecondaryAction>
+                    <IconButton onClick={() => this.handleDelete(toDoItem._id)} edge="end">
+                        <DeleteIcon />
+                    </IconButton>
+                </ListItemSecondaryAction>
+            </ListItem>
+        ))
+        // }
 
         return (
             <List style={{ paddingTop: "60px" }}>
