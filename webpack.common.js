@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const Dotenv = require('dotenv-webpack')
 
 module.exports = {
     mode: 'development',
@@ -8,9 +7,6 @@ module.exports = {
     output: {
         filename: '[name].[contenthash].bundle.js',
         path: path.join(__dirname, 'dist')
-    },
-    devServer: {
-        contentBase: './dist'
     },
     module: {
         rules: [
@@ -24,10 +20,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'src', 'index.html')
-        }),
-        new Dotenv()
+        })
     ],
-    devtool: 'inline-source-map',
     optimization: {
         moduleIds: 'hashed',
         runtimeChunk: 'single',
