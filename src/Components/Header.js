@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import AppBar from '@material-ui/core/AppBar'
 import IconButton from '@material-ui/core/IconButton'
@@ -14,7 +15,8 @@ function Header() {
                     <ListAltIcon />
                 </IconButton>
                 <Typography variant="h6">To Do List</Typography>
-                {/* <Link to="/">To Do List</Link> */}
+                <Link to="/">To Do List</Link>
+                <Link to="/commonTasks">Common Tasks</Link>
             </Toolbar>
         </AppBar>
     )

@@ -32,8 +32,7 @@ module.exports = {
                     name: 'vendors',
                     chunks: 'all',
                 },
-            },
-            chunks: 'all'
+            }
         }
     }
 }
